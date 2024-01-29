@@ -1,0 +1,27 @@
+PROGRAM AreaOfTriangleWithHalfPerimeter
+    IMPLICIT NONE
+    REAL:: A,B,C,X1,X2,X3,Y1,Y2,Y3,P,S,AREA
+    PRINT*,"ENTER THE VALUE OF X1:"
+    READ*,X1
+    PRINT*,"ENTER THE VALUE OF Y1:"
+    READ*,Y1
+    PRINT*,"ENTER THE VALUE OF X2:"
+    READ*,X2
+    PRINT*,"ENTER THE VALUE OF Y2:"
+    READ*,Y2
+    PRINT*,"ENTER THE VALUE OF X3:"
+    READ*,X3
+    PRINT*,"ENTER THE VALUE OF Y3:"
+    READ*,Y3
+    A=sqrt((X2-X1)**2+(Y2-Y1)**2)
+    B=sqrt((X3-X2)**2+(Y3-Y2)**2)
+    C=sqrt((X1-X3)**2+(Y1-Y3)**2)
+    P=A+B+C
+    S=(A+B+C)/2
+    AREA=SQRT(S*(S-A)+(S-B)+(S-C))
+    PRINT*,"THE LENGTH OF THE SIDES ARE:"
+    PRINT*,"A:",A,"B:",B,"C:",C
+    PRINT*,"PERIMETER,P:",P
+    PRINT*,"HALF-PERIMETER,S:",S
+    PRINT*,"AREA:",AREA
+END PROGRAM
